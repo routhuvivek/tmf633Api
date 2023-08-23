@@ -12,13 +12,7 @@ import io.swagger.model.ServiceCatalogUpdate;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
@@ -29,6 +23,7 @@ import java.util.List;
 @Validated
 @Api(value = "serviceCatalog", description = "the serviceCatalog API")
 @RequestMapping(value = "/tmf-api/serviceCatalogManagement/v4/")
+@CrossOrigin
 public interface ServiceCatalogApi {
 
     @ApiOperation(value = "Creates a ServiceCatalog", nickname = "createServiceCatalog", notes = "This operation creates a ServiceCatalog entity.", response = ServiceCatalog.class, tags={ "serviceCatalog", })

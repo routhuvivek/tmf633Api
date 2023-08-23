@@ -54,10 +54,10 @@ public class FeatureSpecification   {
   @OneToMany(targetEntity = ConstraintRef.class, cascade = CascadeType.ALL)
   private List<ConstraintRef> constraint = null;
 
-  @JsonProperty("featureSpecCharacteristic")
+  @JsonProperty("featureSpecChar")
   @Valid
   @OneToMany(targetEntity = FeatureSpecificationCharacteristic.class, cascade = CascadeType.ALL)
-  private List<FeatureSpecificationCharacteristic> featureSpecCharacteristic = null;
+  private List<FeatureSpecificationCharacteristic> featureSpecChar = null;
 
   @JsonProperty("featureSpecRelationship")
   @Valid
@@ -197,33 +197,33 @@ public class FeatureSpecification   {
     this.constraint = constraint;
   }
 
-  public FeatureSpecification featureSpecCharacteristic(List<FeatureSpecificationCharacteristic> featureSpecCharacteristic) {
-    this.featureSpecCharacteristic = featureSpecCharacteristic;
+  public FeatureSpecification featureSpecChar(List<FeatureSpecificationCharacteristic> featureSpecChar) {
+    this.featureSpecChar = featureSpecChar;
     return this;
   }
 
-  public FeatureSpecification addFeatureSpecCharacteristicItem(FeatureSpecificationCharacteristic featureSpecCharacteristicItem) {
-    if (this.featureSpecCharacteristic == null) {
-      this.featureSpecCharacteristic = new ArrayList<FeatureSpecificationCharacteristic>();
+  public FeatureSpecification addfeatureSpecCharItem(FeatureSpecificationCharacteristic featureSpecCharItem) {
+    if (this.featureSpecChar == null) {
+      this.featureSpecChar = new ArrayList<FeatureSpecificationCharacteristic>();
     }
-    this.featureSpecCharacteristic.add(featureSpecCharacteristicItem);
+    this.featureSpecChar.add(featureSpecCharItem);
     return this;
   }
 
   /**
    * This is a list of characteristics for a particular feature
-   * @return featureSpecCharacteristic
+   * @return featureSpecChar
   **/
   @ApiModelProperty(value = "This is a list of characteristics for a particular feature")
 
   @Valid
 
-  public List<FeatureSpecificationCharacteristic> getFeatureSpecCharacteristic() {
-    return featureSpecCharacteristic;
+  public List<FeatureSpecificationCharacteristic> getfeatureSpecChar() {
+    return featureSpecChar;
   }
 
-  public void setFeatureSpecCharacteristic(List<FeatureSpecificationCharacteristic> featureSpecCharacteristic) {
-    this.featureSpecCharacteristic = featureSpecCharacteristic;
+  public void setfeatureSpecChar(List<FeatureSpecificationCharacteristic> featureSpecChar) {
+    this.featureSpecChar = featureSpecChar;
   }
 
   public FeatureSpecification featureSpecRelationship(List<FeatureSpecificationRelationship> featureSpecRelationship) {
@@ -292,14 +292,14 @@ public class FeatureSpecification   {
         Objects.equals(this.name, featureSpecification.name) &&
         Objects.equals(this.version, featureSpecification.version) &&
         Objects.equals(this.constraint, featureSpecification.constraint) &&
-        Objects.equals(this.featureSpecCharacteristic, featureSpecification.featureSpecCharacteristic) &&
+        Objects.equals(this.featureSpecChar, featureSpecification.featureSpecChar) &&
         Objects.equals(this.featureSpecRelationship, featureSpecification.featureSpecRelationship) &&
         Objects.equals(this.validFor, featureSpecification.validFor);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, isBundle, isEnabled, name, version, constraint, featureSpecCharacteristic, featureSpecRelationship, validFor);
+    return Objects.hash(id, isBundle, isEnabled, name, version, constraint, featureSpecChar, featureSpecRelationship, validFor);
   }
 
   @Override
@@ -313,7 +313,7 @@ public class FeatureSpecification   {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    constraint: ").append(toIndentedString(constraint)).append("\n");
-    sb.append("    featureSpecCharacteristic: ").append(toIndentedString(featureSpecCharacteristic)).append("\n");
+    sb.append("    featureSpecChar: ").append(toIndentedString(featureSpecChar)).append("\n");
     sb.append("    featureSpecRelationship: ").append(toIndentedString(featureSpecRelationship)).append("\n");
     sb.append("    validFor: ").append(toIndentedString(validFor)).append("\n");
     sb.append("}");

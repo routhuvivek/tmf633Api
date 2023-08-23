@@ -31,6 +31,7 @@ import javax.validation.constraints.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "FeatureSpecChar")
 public class FeatureSpecificationCharacteristic   {
   @Id
   @JsonProperty("id")
@@ -68,10 +69,10 @@ public class FeatureSpecificationCharacteristic   {
   @OneToMany(targetEntity = FeatureSpecificationCharacteristicRelationship.class, cascade = CascadeType.ALL)
   private List<FeatureSpecificationCharacteristicRelationship> featureSpecCharRelationship = null;
 
-  @JsonProperty("featureSpecCharacteristicValue")
+  @JsonProperty("featureSpecCharVal")
   @Valid
   @OneToMany(targetEntity = CharacteristicValueSpecification.class, cascade = CascadeType.ALL)
-  private List<CharacteristicValueSpecification> featureSpecCharacteristicValue = null;
+  private List<CharacteristicValueSpecification> featureSpecCharVal = null;
 
   @JsonProperty("validFor")
   @OneToOne(targetEntity = TimePeriod.class, cascade = CascadeType.ALL)
@@ -319,33 +320,33 @@ public class FeatureSpecificationCharacteristic   {
     this.featureSpecCharRelationship = featureSpecCharRelationship;
   }
 
-  public FeatureSpecificationCharacteristic featureSpecCharacteristicValue(List<CharacteristicValueSpecification> featureSpecCharacteristicValue) {
-    this.featureSpecCharacteristicValue = featureSpecCharacteristicValue;
+  public FeatureSpecificationCharacteristic featureSpecCharVal(List<CharacteristicValueSpecification> featureSpecCharVal) {
+    this.featureSpecCharVal = featureSpecCharVal;
     return this;
   }
 
-  public FeatureSpecificationCharacteristic addFeatureSpecCharacteristicValueItem(CharacteristicValueSpecification featureSpecCharacteristicValueItem) {
-    if (this.featureSpecCharacteristicValue == null) {
-      this.featureSpecCharacteristicValue = new ArrayList<CharacteristicValueSpecification>();
+  public FeatureSpecificationCharacteristic addfeatureSpecCharValItem(CharacteristicValueSpecification featureSpecCharValItem) {
+    if (this.featureSpecCharVal == null) {
+      this.featureSpecCharVal = new ArrayList<CharacteristicValueSpecification>();
     }
-    this.featureSpecCharacteristicValue.add(featureSpecCharacteristicValueItem);
+    this.featureSpecCharVal.add(featureSpecCharValItem);
     return this;
   }
 
   /**
    * Used to define a set of attributes, each of which can be assigned to a corresponding set of attributes in a FeatureCharacteristic object.
-   * @return featureSpecCharacteristicValue
+   * @return featureSpecCharVal
   **/
   @ApiModelProperty(value = "Used to define a set of attributes, each of which can be assigned to a corresponding set of attributes in a FeatureCharacteristic object.")
 
   @Valid
 
-  public List<CharacteristicValueSpecification> getFeatureSpecCharacteristicValue() {
-    return featureSpecCharacteristicValue;
+  public List<CharacteristicValueSpecification> getfeatureSpecCharVal() {
+    return featureSpecCharVal;
   }
 
-  public void setFeatureSpecCharacteristicValue(List<CharacteristicValueSpecification> featureSpecCharacteristicValue) {
-    this.featureSpecCharacteristicValue = featureSpecCharacteristicValue;
+  public void setfeatureSpecCharVal(List<CharacteristicValueSpecification> featureSpecCharVal) {
+    this.featureSpecCharVal = featureSpecCharVal;
   }
 
   public FeatureSpecificationCharacteristic validFor(TimePeriod validFor) {
@@ -470,7 +471,7 @@ public class FeatureSpecificationCharacteristic   {
         Objects.equals(this.regex, featureSpecificationCharacteristic.regex) &&
         Objects.equals(this.valueType, featureSpecificationCharacteristic.valueType) &&
         Objects.equals(this.featureSpecCharRelationship, featureSpecificationCharacteristic.featureSpecCharRelationship) &&
-        Objects.equals(this.featureSpecCharacteristicValue, featureSpecificationCharacteristic.featureSpecCharacteristicValue) &&
+        Objects.equals(this.featureSpecCharVal, featureSpecificationCharacteristic.featureSpecCharVal) &&
         Objects.equals(this.validFor, featureSpecificationCharacteristic.validFor) &&
         Objects.equals(this.baseType, featureSpecificationCharacteristic.baseType) &&
         Objects.equals(this.schemaLocation, featureSpecificationCharacteristic.schemaLocation) &&
@@ -480,7 +481,7 @@ public class FeatureSpecificationCharacteristic   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, configurable, description, extensible, isUnique, maxCardinality, minCardinality, name, regex, valueType, featureSpecCharRelationship, featureSpecCharacteristicValue, validFor, baseType, schemaLocation, type, valueSchemaLocation);
+    return Objects.hash(id, configurable, description, extensible, isUnique, maxCardinality, minCardinality, name, regex, valueType, featureSpecCharRelationship, featureSpecCharVal, validFor, baseType, schemaLocation, type, valueSchemaLocation);
   }
 
   @Override
@@ -499,7 +500,7 @@ public class FeatureSpecificationCharacteristic   {
     sb.append("    regex: ").append(toIndentedString(regex)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
     sb.append("    featureSpecCharRelationship: ").append(toIndentedString(featureSpecCharRelationship)).append("\n");
-    sb.append("    featureSpecCharacteristicValue: ").append(toIndentedString(featureSpecCharacteristicValue)).append("\n");
+    sb.append("    featureSpecCharVal: ").append(toIndentedString(featureSpecCharVal)).append("\n");
     sb.append("    validFor: ").append(toIndentedString(validFor)).append("\n");
     sb.append("    baseType: ").append(toIndentedString(baseType)).append("\n");
     sb.append("    schemaLocation: ").append(toIndentedString(schemaLocation)).append("\n");
