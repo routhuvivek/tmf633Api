@@ -3,11 +3,13 @@ C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\jav
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\ServiceCatalogChangeEvent.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\ServiceCandidateCreateEventPayload.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\api\ServiceCandidateApi.java
+C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\dao\ServiceCandidateDao.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\CharacteristicSpecificationRelationship.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\ServiceCatalogUpdate.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\EntitySpecification.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\ServiceCategoryRef.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\api\ListenerApiController.java
+C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\dao\ServiceSpecificationDao.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\Extensible.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\ImportJobCreate.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\ConstraintRef.java
@@ -58,6 +60,7 @@ C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\jav
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\configuration\JacksonConfiguration.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\EventSubscriptionInput.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\ServiceCandidateChangeEvent.java
+C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\dao\ServiceCategoryDao.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\api\NotFoundException.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\api\ServiceSpecificationApiController.java
 C:\Users\rahulk\Downloads\spring-server-generated (2)\spring-server\src\main\java\io\swagger\model\FeatureSpecification.java

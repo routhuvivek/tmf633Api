@@ -87,14 +87,20 @@ public class ServiceCategoryApiController implements ServiceCategoryApi {
         if (accept != null && accept.contains("application/json")) {
             try {
                 ServiceCategory serviceCategoryDb= serviceCategoryDao.findOne(id);
+                if(Objects.nonNull(serviceCategory.getName())&& !"".equalsIgnoreCase(serviceCategory.getName())){
+                    serviceCategoryDb.setName(serviceCategory.getName());
+                }
+                if(Objects.nonNull(serviceCategory.getDescription())&& !"".equalsIgnoreCase(serviceCategory.getDescription())){
+                    serviceCategoryDb.setDescription(serviceCategory.getDescription());
+                }
                 if(Objects.nonNull(serviceCategory.getVersion())&& !"".equalsIgnoreCase(serviceCategory.getVersion())){
                     serviceCategoryDb.setVersion(serviceCategory.getVersion());
                 }
-                if(Objects.nonNull(serviceCategory.getValidFor())&& !"".equalsIgnoreCase(serviceCategory.getValidFor().toString())){
-                    serviceCategoryDb.setValidFor(serviceCategory.getValidFor());
-                }
+//                if(Objects.nonNull(serviceCategory.getValidFor())&& !"".equalsIgnoreCase(serviceCategory.getValidFor().toString())){
+//                    serviceCategoryDb.setValidFor(serviceCategory.getValidFor());
+//                }
                 ServiceCategory serviceCategoryResponse = serviceCategoryDao.findOne(id);
-                return new ResponseEntity<ServiceCategory>(serviceCategoryResponse, HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<ServiceCategory>(serviceCategoryResponse, HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<ServiceCategory>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -108,7 +114,7 @@ public class ServiceCategoryApiController implements ServiceCategoryApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<ServiceCategory>(serviceCategoryDao.findOne(id), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<ServiceCategory>(serviceCategoryDao.findOne(id), HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<ServiceCategory>(HttpStatus.INTERNAL_SERVER_ERROR);

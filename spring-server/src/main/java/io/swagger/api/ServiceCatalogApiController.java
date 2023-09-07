@@ -90,12 +90,18 @@ public class ServiceCatalogApiController implements ServiceCatalogApi {
             try {
                 //ServiceCatalog serviceCatalogRequest = modelMapper.map(serviceCatalog, ServiceCatalog.class);
                 ServiceCatalog serviceCatalogDb= serviceCatalogDao.findOne(id);
+                if(Objects.nonNull(serviceCatalog.getName())&& !"".equalsIgnoreCase(serviceCatalog.getName())){
+                    serviceCatalogDb.setName(serviceCatalog.getName());
+                }
+                if(Objects.nonNull(serviceCatalog.getDescription())&& !"".equalsIgnoreCase(serviceCatalog.getDescription())){
+                    serviceCatalogDb.setDescription(serviceCatalog.getDescription());
+                }
                 if(Objects.nonNull(serviceCatalog.getVersion())&& !"".equalsIgnoreCase(serviceCatalog.getVersion())){
                     serviceCatalogDb.setVersion(serviceCatalog.getVersion());
                 }
-                if(Objects.nonNull(serviceCatalog.getValidFor())&& !"".equalsIgnoreCase(serviceCatalog.getValidFor().toString())){
-                    serviceCatalogDb.setValidFor(serviceCatalog.getValidFor());
-                }
+//                if(Objects.nonNull(serviceCatalog.getValidFor())&& !"".equalsIgnoreCase(serviceCatalog.getValidFor().toString())){
+//                    serviceCatalogDb.setValidFor(serviceCatalog.getValidFor());
+//                }
                 ServiceCatalog serviceCatalogResponse = serviceCatalogDao.findOne(id);
                 return new ResponseEntity<ServiceCatalog>(serviceCatalogResponse, HttpStatus.ACCEPTED);
             } catch (Exception e) {
@@ -111,7 +117,7 @@ public class ServiceCatalogApiController implements ServiceCatalogApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<ServiceCatalog>(serviceCatalogDao.findOne(id), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<ServiceCatalog>(serviceCatalogDao.findOne(id), HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<ServiceCatalog>(HttpStatus.INTERNAL_SERVER_ERROR);

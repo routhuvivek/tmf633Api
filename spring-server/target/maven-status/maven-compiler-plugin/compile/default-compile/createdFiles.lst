@@ -2,6 +2,7 @@ io\swagger\model\ServiceCatalog$ServiceCatalogBuilder.class
 io\swagger\model\ServiceCategoryCreateEventPayload.class
 io\swagger\model\ServiceSpecificationCreateEvent.class
 io\swagger\configuration\HomeController.class
+io\swagger\dao\ServiceCategoryDao.class
 io\swagger\model\FeatureSpecificationCharacteristic.class
 io\swagger\model\ImportJobCreate.class
 io\swagger\model\ServiceSpecificationUpdate.class
@@ -9,6 +10,7 @@ io\swagger\configuration\JacksonConfiguration.class
 io\swagger\model\Error.class
 io\swagger\model\ServiceCatalogChangeEventPayload.class
 io\swagger\api\ApiResponseMessage.class
+io\swagger\dao\ServiceSpecificationDao.class
 io\swagger\api\ListenerApi.class
 io\swagger\model\ServiceCatalogUpdate.class
 io\swagger\model\ServiceCategoryCreateEvent.class
@@ -21,6 +23,7 @@ io\swagger\model\ServiceCatalogCreate$ServiceCatalogCreateBuilder.class
 io\swagger\model\AttachmentRefOrValue.class
 io\swagger\model\ServiceCategoryUpdate.class
 io\swagger\configuration\CustomInstantDeserializer$5.class
+io\swagger\dao\ServiceCandidateDao.class
 io\swagger\configuration\CustomInstantDeserializer$FromIntegerArguments.class
 io\swagger\api\ApiException.class
 io\swagger\api\ServiceCategoryApiController.class
@@ -37,7 +40,9 @@ io\swagger\model\ResourceSpecificationRef.class
 io\swagger\api\HubApi.class
 io\swagger\model\ServiceCandidateChangeEvent.class
 io\swagger\model\ServiceCandidateChangeEventPayload.class
+io\swagger\model\EntitySpecificationRelationship$EntitySpecificationRelationshipBuilder.class
 io\swagger\model\ServiceSpecRelationship.class
+io\swagger\model\TargetEntitySchema$TargetEntitySchemaBuilder.class
 io\swagger\api\ServiceCategoryApi.class
 io\swagger\model\FeatureSpecificationCharacteristicRelationship.class
 io\swagger\model\EntitySpecificationRelationship.class
@@ -69,6 +74,7 @@ io\swagger\model\ServiceCategoryRef$ServiceCategoryRefBuilder.class
 io\swagger\model\ServiceCandidateDeleteEventPayload.class
 io\swagger\configuration\CustomInstantDeserializer$3.class
 io\swagger\model\CharacteristicSpecification.class
+io\swagger\model\ConstraintRef$ConstraintRefBuilder.class
 io\swagger\configuration\CustomInstantDeserializer$11.class
 io\swagger\configuration\CustomInstantDeserializer$6.class
 io\swagger\model\ServiceCategoryDeleteEventPayload.class
@@ -83,6 +89,7 @@ io\swagger\model\ServiceSpecificationChangeEventPayload.class
 io\swagger\model\ServiceCatalogChangeEvent.class
 io\swagger\model\AssociationSpecificationRef.class
 io\swagger\api\NotFoundException.class
+io\swagger\model\AssociationSpecificationRef$AssociationSpecificationRefBuilder.class
 io\swagger\model\FeatureSpecification.class
 io\swagger\api\ServiceCatalogApi.class
 io\swagger\model\CharacteristicSpecificationBase.class
@@ -115,7 +122,9 @@ io\swagger\api\ApiOriginFilter.class
 io\swagger\model\EventSubscription.class
 io\swagger\model\RelatedParty.class
 io\swagger\model\TimePeriod.class
+io\swagger\model\AttachmentRefOrValue$AttachmentRefOrValueBuilder.class
 io\swagger\model\ServiceCatalog.class
+io\swagger\model\ServiceCandidateRef$ServiceCandidateRefBuilder.class
 io\swagger\RFC3339DateFormat.class
 io\swagger\model\Any.class
 io\swagger\model\ServiceCandidateCreate.class

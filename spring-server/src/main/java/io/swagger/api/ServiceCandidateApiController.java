@@ -87,12 +87,18 @@ public class ServiceCandidateApiController implements ServiceCandidateApi {
         if (accept != null && accept.contains("application/json")) {
             try {
                 ServiceCandidate serviceCandidateDb= serviceCandidateDao.findOne(id);
+                if(Objects.nonNull(serviceCandidate.getName())&& !"".equalsIgnoreCase(serviceCandidate.getName())){
+                    serviceCandidateDb.setName(serviceCandidate.getName());
+                }
+                if(Objects.nonNull(serviceCandidate.getDescription())&& !"".equalsIgnoreCase(serviceCandidate.getDescription())){
+                    serviceCandidateDb.setDescription(serviceCandidate.getDescription());
+                }
                 if(Objects.nonNull(serviceCandidate.getVersion())&& !"".equalsIgnoreCase(serviceCandidate.getVersion())){
                     serviceCandidateDb.setVersion(serviceCandidate.getVersion());
                 }
-                if(Objects.nonNull(serviceCandidate.getValidFor())&& !"".equalsIgnoreCase(serviceCandidate.getValidFor().toString())){
-                    serviceCandidateDb.setValidFor(serviceCandidate.getValidFor());
-                }
+//                if(Objects.nonNull(serviceCandidate.getValidFor())&& !"".equalsIgnoreCase(serviceCandidate.getValidFor().toString())){
+//                    serviceCandidateDb.setValidFor(serviceCandidate.getValidFor());
+//                }
                 ServiceCandidate serviceCandidateResponse = serviceCandidateDao.findOne(id);
                 return new ResponseEntity<ServiceCandidate>(serviceCandidateResponse, HttpStatus.ACCEPTED);
             } catch (Exception e) {

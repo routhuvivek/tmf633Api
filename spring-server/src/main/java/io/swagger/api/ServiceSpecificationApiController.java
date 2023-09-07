@@ -71,7 +71,7 @@ public class ServiceSpecificationApiController implements ServiceSpecificationAp
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<List<ServiceSpecification>>(serviceSpecificationDao.findAll(), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<List<ServiceSpecification>>(serviceSpecificationDao.findAll(), HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<List<ServiceSpecification>>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -86,14 +86,20 @@ public class ServiceSpecificationApiController implements ServiceSpecificationAp
         if (accept != null && accept.contains("application/json")) {
             try {
                 ServiceSpecification serviceSpecificationDb= serviceSpecificationDao.findOne(id);
+                if(Objects.nonNull(serviceSpecification.getName())&& !"".equalsIgnoreCase(serviceSpecification.getName())){
+                    serviceSpecificationDb.setName(serviceSpecification.getName());
+                }
+                if(Objects.nonNull(serviceSpecification.getDescription())&& !"".equalsIgnoreCase(serviceSpecification.getDescription())){
+                    serviceSpecificationDb.setDescription(serviceSpecification.getDescription());
+                }
                 if(Objects.nonNull(serviceSpecification.getVersion())&& !"".equalsIgnoreCase(serviceSpecification.getVersion())){
                     serviceSpecificationDb.setVersion(serviceSpecification.getVersion());
                 }
-                if(Objects.nonNull(serviceSpecification.getValidFor())&& !"".equalsIgnoreCase(serviceSpecification.getValidFor().toString())){
-                    serviceSpecificationDb.setValidFor(serviceSpecification.getValidFor());
-                }
+//                if(Objects.nonNull(serviceSpecification.getValidFor())&& !"".equalsIgnoreCase(serviceSpecification.getValidFor().toString())){
+//                    serviceSpecificationDb.setValidFor(serviceSpecification.getValidFor());
+//                }
                 ServiceSpecification serviceSpecificationResponse = serviceSpecificationDao.findOne(id);
-                return new ResponseEntity<ServiceSpecification>(serviceSpecificationResponse, HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<ServiceSpecification>(serviceSpecificationResponse, HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<ServiceSpecification>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -107,7 +113,7 @@ public class ServiceSpecificationApiController implements ServiceSpecificationAp
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<ServiceSpecification>(serviceSpecificationDao.findOne(id), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<ServiceSpecification>(serviceSpecificationDao.findOne(id), HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<ServiceSpecification>(HttpStatus.INTERNAL_SERVER_ERROR);

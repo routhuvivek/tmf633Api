@@ -64,6 +64,7 @@ public class ServiceCandidate   {
   private List<ServiceCategoryRef> category = null;
 
   @JsonProperty("serviceSpecification")
+  //@Valid
   @OneToOne(targetEntity = ServiceSpecificationRef.class, cascade = CascadeType.ALL)
   private ServiceSpecificationRef serviceSpecification = null;
 
