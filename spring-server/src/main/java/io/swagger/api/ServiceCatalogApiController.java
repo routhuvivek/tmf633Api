@@ -103,6 +103,7 @@ public class ServiceCatalogApiController implements ServiceCatalogApi {
 //                    serviceCatalogDb.setValidFor(serviceCatalog.getValidFor());
 //                }
                 ServiceCatalog serviceCatalogResponse = serviceCatalogDao.findOne(id);
+                serviceCatalogDao.save(serviceCatalogResponse);
                 return new ResponseEntity<ServiceCatalog>(serviceCatalogResponse, HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);

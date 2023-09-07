@@ -100,6 +100,7 @@ public class ServiceCategoryApiController implements ServiceCategoryApi {
 //                    serviceCategoryDb.setValidFor(serviceCategory.getValidFor());
 //                }
                 ServiceCategory serviceCategoryResponse = serviceCategoryDao.findOne(id);
+                serviceCategoryDao.save(serviceCategoryResponse);
                 return new ResponseEntity<ServiceCategory>(serviceCategoryResponse, HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);

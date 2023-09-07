@@ -100,6 +100,7 @@ public class ServiceCandidateApiController implements ServiceCandidateApi {
 //                    serviceCandidateDb.setValidFor(serviceCandidate.getValidFor());
 //                }
                 ServiceCandidate serviceCandidateResponse = serviceCandidateDao.findOne(id);
+                serviceCandidateDao.save(serviceCandidateResponse);
                 return new ResponseEntity<ServiceCandidate>(serviceCandidateResponse, HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);

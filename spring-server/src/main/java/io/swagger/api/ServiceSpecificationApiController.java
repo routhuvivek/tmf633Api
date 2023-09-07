@@ -99,6 +99,7 @@ public class ServiceSpecificationApiController implements ServiceSpecificationAp
 //                    serviceSpecificationDb.setValidFor(serviceSpecification.getValidFor());
 //                }
                 ServiceSpecification serviceSpecificationResponse = serviceSpecificationDao.findOne(id);
+                serviceSpecificationDao.save(serviceSpecificationResponse);
                 return new ResponseEntity<ServiceSpecification>(serviceSpecificationResponse, HttpStatus.ACCEPTED);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);
