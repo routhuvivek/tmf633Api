@@ -1,0 +1,524 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial Black;}{\f1\fnil\fcharset0 Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.20348}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs28\lang9 TMF-633 API\par
+
+\pard\sa200\sl276\slmult1\f1\fs22 GitHub Repo \b0 : {{\field{\*\fldinst{HYPERLINK https://github.com/routhuvivek/tmf633api }}{\fldrslt{https://github.com/routhuvivek/tmf633api\ul0\cf0}}}}\f1\fs22\par
+
+\pard\sl276\slmult1\b Local setup steps\b0 :\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 Install Java-8 (openJdk8).\b\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs22 Install an IDE like IntelliJ Idea.\b\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs22 Launch the IDE and import the project folder in the ide as a Maven project.\b\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs22 After importing, compile the project and then the below urls can be used to test the code with the help of POSTMAN.\b\fs28\par
+
+\pard\sa200\sl276\slmult1\par
+ServiceCandidate\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1\tx540\fs22 POST Operation\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\tx540 POST Url : localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate , where \b localhost:8080 \b0 will be the hosted domain's ip.\par
+{\pntext\f2\'B7\tab}POST sample request body\par
+
+\pard\sl240\slmult1\tx540\tab\{\par
+ "id": "4991",\par
+ "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate/4991 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate/4991\ul0\cf0}}}}\f1\fs22 ",\par
+ "name": "TVServiceCandidate",\par
+ "description": "This service candidate allows provision of TV service",\par
+ "version": "2.1",\par
+ "validFor": \{\par
+ "startDateTime": "2017-08-23T00:00:00Z",\par
+ "endDateTime": "2021-03-25T00:00:00Z"\par
+ \},\par
+ "lastUpdate": "2020-08-16T00:00:00Z",\par
+ "lifecycleStatus": "Active",\par
+ "category": [\par
+ \{\par
+ "id": "5980",\par
+ "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCategory/5980 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCategory/5980\ul0\cf0}}}}\f1\fs22 ",\par
+ "version": "3.2",\par
+ "name": "TV",\par
+ "@referredType": "ServiceCategory",\par
+ "@type": "ServiceCategoryRef",\par
+ "@schemaLocation": "<{{\field{\*\fldinst{HYPERLINK "https://mycsp.com:8080/tmf-api/schema/Service/ServiceCategoryRef.schema.json "}}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ServiceCategoryRef.schema.json \ul0\cf0}}}}\f1\fs22 >",\par
+ "@baseType": ""\par
+ \}\par
+ ],\par
+ "serviceSpecification": \{\par
+ "id": "9600",\par
+ "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/9600 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/9600\ul0\cf0}}}}\f1\fs22 ",\par
+ "version": "2.1",\par
+ "name": "CFSS_TV",\par
+ "@referredType": "CustomerFacingServiceSpecification",\par
+ "@schemaLocation": "<{{\field{\*\fldinst{HYPERLINK "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json "}}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json \ul0\cf0}}}}\f1\fs22 >",\par
+ "@baseType": "",\par
+ "@type": "ServiceSpecificationRef"\par
+ \},\par
+ "@type": "ServiceCandidate",\par
+ "@schemaLocation": "<{{\field{\*\fldinst{HYPERLINK "https://mycsp.com:8080/tmf-api/schema/Service/ServiceCandidate.schema.json "}}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ServiceCandidate.schema.json \ul0\cf0}}}}\f1\fs22 >",\par
+ "@baseType": ""\par
+\}\par
+\par
+****For GET and DELETE operation we wont need any request body, only ID as a parameter will be required.****\par
+\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 GET Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to get all data : \par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to get an specific ID:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate/:id , here "\b :id\b0 " \tab represents the ID which we need to retrieve.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 DELETE Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to delete an id:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate/:id , here "\b :id\b0 " \tab represents the ID which we need to delete.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 PATCH Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL for patch operation:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate/:id , here "\b :id\b0 " \tab represents the ID which we need to patch. We need to provide the ID so that we can \tab know which data point we need to patch.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 PATCH operation sample request body:\par
+
+\pard\sl240\slmult1\tx540\tab\{\par
+   "name":"Test1",\par
+   "description":"this is a test",\par
+   "version": "2.0"\par
+\}\par
+\par
+
+\pard\sa200\sl276\slmult1\b\fs28 ServiceCategory\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1\tx540\fs24 POST Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\tx540 POST Url : localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCateogry , where \b localhost:8080 \b0 will be the hosted domain's ip.\par
+{\pntext\f2\'B7\tab}POST sample request body\par
+
+\pard\sl240\slmult1\tx540\tab\{\par
+  "name": "Cloud Services",\par
+  "description": "A category to hold all available cloud service offers",\par
+  "version": "1.0",\par
+  "validFor": \{\par
+    "startDateTime": "2020-08-25T00:00:00Z",\par
+    "endDateTime": "2023-11-24T00:00:00Z"\par
+  \},\par
+  "lifecycleStatus": "Active",\par
+  "isRoot": true,\par
+  "@type": "ServiceCategory",\par
+  "@schemalLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Service/ServiceCategory.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ServiceCategory.schema.json\ul0\cf0}}}}\f1\fs22 ",\par
+  "@baseType": "Category"\par
+\}\par
+\par
+****For GET and DELETE operation we wont need any request body, only ID as a parameter will be required.****\par
+\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 GET Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to get all data : \par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCategory\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to get an specific ID:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCategory/:id , here "\b :id\b0 " \tab represents the ID which we need to retrieve.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 DELETE Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to delete an id:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCategory/:id , here "\b :id\b0 " \tab represents the ID which we need to delete.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 PATCH Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL for patch operation:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCategory/:id , here "\b :id\b0 " \tab represents the ID which we need to patch. We need to provide the ID so that we can \tab know which data point we need to patch.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 PATCH operation sample request body:\par
+
+\pard\sl240\slmult1\tx540\tab\{\par
+   "name":"Test1",\par
+   "description":"this is a test",\par
+   "version": "2.0"\par
+\}\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\b\fs28 ServiceCatalog\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1\tx540\fs24 POST Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\tx540 POST Url : localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCatalog , where \b localhost:8080 \b0 will be the hosted domain's ip.\par
+{\pntext\f2\'B7\tab}POST sample request body\par
+
+\pard\sl240\slmult1\tx540\tab\{\par
+    "id": "3830",\par
+    "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCatalog/3830 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCatalog/3830\ul0\cf0}}}}\f1\fs22 ",\par
+    "name": "IOT Catalog",\par
+    "description": "This service catalog describes IOT services that address the wholesale business segment.",\par
+    "version": "1.0",\par
+    "validFor": \{\par
+        "startDateTime": "2017-08-29T00:00:00Z",\par
+        "endDateTime": "2021-03-25T00:00:00Z"\par
+    \},\par
+    "lastUpdate": "2020-08-25T00:00:00Z",\par
+    "lifecycleStatus": "Active",\par
+    "relatedParty": [\par
+        \{\par
+            "href": "https:/host:port/tmf-api/partyRoleManagement/v4/partyRole/4080",\par
+            "id": "4080",\par
+            "name": "Broadly Broad Ltd",\par
+            "role": "vendor",\par
+            "@referredType": "PartyRole",\par
+            "@type": "RelatedParty",\par
+            "@schemaLocation": "<{{\field{\*\fldinst{HYPERLINK "https://mycsp.com:8080/tmf-api/schema/EngagedParty/RelatedParty.schema.json "}}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/EngagedParty/RelatedParty.schema.json \ul0\cf0}}}}\f1\fs22 >",\par
+            "@baseType": "ref"\par
+        \}\par
+    ],\par
+    "category": [\par
+        \{\par
+            "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/category/7750 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/category/7750\ul0\cf0}}}}\f1\fs22 ",\par
+            "id": "7750",\par
+            "name": "IoT",\par
+            "@referredType": "ServiceCategory",\par
+            "@type": "ServiceCategoryRef",\par
+            "@schemaLocation": "<{{\field{\*\fldinst{HYPERLINK "https://mycsp.com:8080/tmf-api/schema/Service/ServiceCategoryRef.schema.json "}}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ServiceCategoryRef.schema.json \ul0\cf0}}}}\f1\fs22 >",\par
+            "@baseType": "ref"\par
+        \}\par
+    ],\par
+    "@type": "ServiceCatalog",\par
+    "@schemaLocation": "<{{\field{\*\fldinst{HYPERLINK "https://mycsp.com:8080/tmf-api/schema/Service/ServiceCatalog.schema.json "}}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ServiceCatalog.schema.json \ul0\cf0}}}}\f1\fs22 >",\par
+    "@baseType": "Catalog"\par
+\}\par
+\par
+****For GET and DELETE operation we wont need any request body, only ID as a parameter will be required.****\par
+\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 GET Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to get all data : \par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCatalog\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to get an specific ID:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCatalog/:id , here "\b :id\b0 " \tab represents the ID which we need to retrieve.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 DELETE Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to delete an id:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCatalog/:id , here "\b :id\b0 " \tab represents the ID which we need to delete.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 PATCH Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL for patch operation:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceCatalog/:id , here "\b :id\b0 " \tab represents the ID which we need to patch. We need to provide the ID so that we can \tab know which data point we need to patch.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 PATCH operation sample request body:\par
+
+\pard\sl240\slmult1\tx540\tab\{\par
+   "name":"Test1",\par
+   "description":"this is a test",\par
+   "version": "2.0"\par
+\}\par
+\par
+
+\pard\sa200\sl276\slmult1\b\fs28 ServiceSpecification\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1\tx540\fs24 POST Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\tx540 POST Url : localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification , where \b localhost:8080 \b0 will be the hosted domain's ip.\par
+{\pntext\f2\'B7\tab}POST sample request body\par
+
+\pard\sl240\slmult1\tx540\tab\{\par
+  "name": "Firewall Service",\par
+  "description": "This service specification describes a firewall service that can be deployed in customer-premises equipment.",\par
+  "version": "2.1",\par
+  "validFor": \{\par
+    "startDateTime": "2020-08-25T00:00:00Z",\par
+    "endDateTime": "2021-03-25T00:00:00Z"\par
+  \},\par
+  "lifecycleStatus": "Active",\par
+  "resourceSpecification": [\par
+    \{\par
+      "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/resourceCatalogManagement/v4/resourceSpecification/42 }}{\fldrslt{https://mycsp.com:8080/tmf-api/resourceCatalogManagement/v4/resourceSpecification/42\ul0\cf0}}}}\f1\fs22 ",\par
+      "id": "44",\par
+      "name": "Firewall",\par
+      "version": "1.0",\par
+      "@referredType": "ResourceFunctionSpec",\par
+      "@type": "ResourceSpecificationRef",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Resource/ResourceSpecificationRef.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Resource/ResourceSpecificationRef.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "attachment": [\par
+    \{\par
+      "description": "This attachment gives a description of the firewall service with diagrams.",\par
+      "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/documentManagement/v4/attachment/22 }}{\fldrslt{https://mycsp.com:8080/tmf-api/documentManagement/v4/attachment/22\ul0\cf0}}}}\f1\fs22 ",\par
+      "id": "24",\par
+      "url": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:7070/docloader?docnum=3534536 }}{\fldrslt{https://mycsp.com:7070/docloader?docnum=3534536\ul0\cf0}}}}\f1\fs22 ",\par
+      "@attachmentType": "Document",\par
+      "mimeType": ".docx",\par
+      "validFor": \{\par
+        "startDateTime": "2020-08-25T00:00:00Z",\par
+        "endDateTime": "2021-03-25T00:00:00Z"\par
+      \},\par
+      "size": \{\par
+        "amount": 1532,\par
+        "units": "KB"\par
+      \},\par
+      "name": "Firewall Service",\par
+      "@type": "Attachment",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/Attachment.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/Attachment.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "specCharacteristic": [\par
+    \{\par
+      "name": "operatingSystem",\par
+      "id": "5841",\par
+      "description": "This characteristic describes the operating system run by the service",\par
+      "valueType": "string",\par
+      "configurable": true,\par
+      "validFor": \{\par
+        "startDateTime": "2020-08-25T00:00:00Z",\par
+        "endDateTime": "2021-03-07T00:00:00Z"\par
+      \},\par
+      "@valueSchemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json\ul0\cf0}}}}\f1\fs22 ",\par
+      "minCardinality": 0,\par
+      "maxCardinality": 1,\par
+      "isUnique": true,\par
+      "regex": "",\par
+      "extensible": false,\par
+      "characteristicValueSpecification": [\par
+        \{\par
+          "valueType": "string",\par
+          "isDefault": true,\par
+          "value": "Android KitKat",\par
+          "validFor": \{\par
+            "startDateTime": "2020-08-25T00:00:00Z",\par
+            "endDateTime": "2021-03-07T00:00:00Z"\par
+          \},\par
+          "rangeInterval": "open",\par
+          "@type": "CharacteristicValueSpecification",\par
+          "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+        \}\par
+      ],\par
+      "charSpecRelationship": [\par
+        \{\par
+          "relationshipType": "dependency",\par
+          "parentSpecificationId": "1744",\par
+          "parentSpecificationHref": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/1744 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/1744\ul0\cf0}}}}\f1\fs22 ",\par
+          "characteristicSpecificationId": "4694",\par
+          "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecificationCharacteristic/4694 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecificationCharacteristic/4694\ul0\cf0}}}}\f1\fs22 ",\par
+          "name": "operatingSystem",\par
+          "validFor": \{\par
+            "startDateTime": "2020-08-25T00:00:00Z",\par
+            "endDateTime": "2021-03-07T00:00:00Z"\par
+          \},\par
+          "@type": "CharacteristicSpecificationRelationship",\par
+          "@baseType": "",\par
+          "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecificationRelationship.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecificationRelationship.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+        \}\par
+      ],\par
+      "@type": "SpecCharacteristic",\par
+      "@baseType": "",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \},\par
+    \{\par
+      "name": "scalability",\par
+\tab   "id": "5842",\par
+      "description": "Scalability parameters for this resource facing service spec ",\par
+      "valueType": "CapabilityScalable",\par
+      "configurable": true,\par
+      "validFor": \{\par
+        "startDateTime": "2020-08-25T00:00:00Z",\par
+        "endDateTime": "2021-03-12T00:00:00Z"\par
+      \},\par
+      "@valueSchemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Service/CapabilityScalable.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/CapabilityScalable.schema.json\ul0\cf0}}}}\f1\fs22 ",\par
+      "minCardinality": 0,\par
+      "maxCardinality": 1,\par
+      "isUnique": true,\par
+      "regex": "",\par
+      "extensible": true,\par
+      "characteristicValueSpecification": [\par
+        \{\par
+          "valueType": "object",\par
+          "isDefault": true,\par
+          "value": \{\par
+            "minInstances": 1,\par
+            "maxInstances": 1000\par
+          \},\par
+          "validFor": \{\par
+            "startDateTime": "2020-08-25T00:00:00Z",\par
+            "endDateTime": "2021-03-12T00:00:00Z"\par
+          \},\par
+          "rangeInterval": "open",\par
+          "@type": "CharacteristicValueSpecification",\par
+          "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+        \}\par
+      ],\par
+      "@type": "SpecCharacteristic",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "relatedParty": [\par
+    \{\par
+      "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/partyManagement/v4/organization/3644 }}{\fldrslt{https://mycsp.com:8080/tmf-api/partyManagement/v4/organization/3644\ul0\cf0}}}}\f1\fs22 ",\par
+      "id": "3644",\par
+      "name": "Firewall Express",\par
+      "role": "Supplier",\par
+      "@referredType": "PartyRole",\par
+      "@type": "RelatedParty",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/EngagedParty/RelatedParty.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/EngagedParty/RelatedParty.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "serviceSpecRelationship": [\par
+    \{\par
+      "relationshipType": "dependency",\par
+      "role": "dependent",\par
+      "id": "5564",\par
+      "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/5564 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/5564\ul0\cf0}}}}\f1\fs22 ",\par
+      "name": "Points to the Deep Packet Inspection service on which this Firewall service depends",\par
+      "validFor": \{\par
+        "startDateTime": "2020-08-25T00:00:00Z",\par
+        "endDateTime": "2021-03-25T00:00:00Z"\par
+      \},\par
+      "@referredType": "ResourceFacingServiceSpecification",\par
+      "@type": "ServiceSpecRelationship",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecRelationship.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecRelationship.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "serviceLevelSpecification": [\par
+    \{\par
+      "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceQualityManagement/v4/serviceLevelSpecification/8894 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceQualityManagement/v4/serviceLevelSpecification/8894\ul0\cf0}}}}\f1\fs22 ",\par
+      "id": "8894",\par
+      "name": "Platinum",\par
+      "@type": "ServiceLevelSpecificationRef",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Service/ServiceLevelSpecificationRef.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ServiceLevelSpecificationRef.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "targetServiceSchema": \{\par
+    "@type": "RFS",\par
+    "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Service/RFS.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/RFS.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+  \},\par
+  "constraint": [\par
+    \{\par
+      "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/policyManagement/v4/policy/1995 }}{\fldrslt{https://mycsp.com:8080/tmf-api/policyManagement/v4/policy/1995\ul0\cf0}}}}\f1\fs22 ",\par
+      "id": "1995",\par
+      "name": "firewallEligibilityRule",\par
+      "version": "1.0",\par
+      "@referredType": "Constraint",\par
+      "@type": "ConstraintRef",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/ConstraintRef.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/ConstraintRef.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "entitySpecRelationship": [\par
+    \{\par
+      "relationshipType": "ServiceSpecTestedVia",\par
+      "role": "serviceUnderTest",\par
+      "id": "3334",\par
+      "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceTestManagement/v4/serviceTestSpec/3334 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceTestManagement/v4/serviceTestSpec/3334\ul0\cf0}}}}\f1\fs22 ",\par
+      "name": "FirewallFunctionalTestSpec",\par
+      "validFor": \{\par
+        "startDateTime": "2020-08-25T00:00:00Z",\par
+        "endDateTime": "2021-03-25T00:00:00Z"\par
+      \},\par
+      "@referredType": "FunctionalServiceTestSpec",\par
+      "@type": "EntitySpecRelationship",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/EntitySpecRelationship.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/EntitySpecRelationship.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \},\par
+    \{\par
+      "relationshipType": "ServiceSpecMeasuredBy",\par
+      "role": "serviceUnderTest",\par
+      "id": "7314",\par
+      "href": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/servicePerformanceSpec/7314 }}{\fldrslt{https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/servicePerformanceSpec/7314\ul0\cf0}}}}\f1\fs22 ",\par
+      "name": "FirewallPerformanceSpec",\par
+      "validFor": \{\par
+        "startDateTime": "2020-08-25T00:00:00Z",\par
+        "endDateTime": "2021-03-25T00:00:00Z"\par
+      \},\par
+      "@referredType": "ServicePerformanceSpec",\par
+      "@type": "EntitySpecRelationship",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/EntitySpecRelationship.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/EntitySpecRelationship.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "featureSpecification": [\par
+    \{\par
+      "isEnabled": false,\par
+      "isBundle": false,\par
+      "id": "DPI-2224",\par
+      "name": "deep packet inspection",\par
+      "validFor": \{\par
+        "startDateTime": "2020-08-25T00:00:00Z",\par
+        "endDateTime": "2021-03-25T00:00:00Z"\par
+      \},\par
+      "featureSpecRelationship": [],\par
+      "featureSpecCharacteristic": [],\par
+      "version": "1.0",\par
+      "@type": "FeatureSpecification",\par
+      "@baseType": "",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/FeatureSpecification.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/FeatureSpecification.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \},\par
+    \{\par
+      "isEnabled": true,\par
+      "isBundle": false,\par
+      "id": "IPS-2224",\par
+      "name": "Intrusion Prevention Systems ",\par
+      "validFor": \{\par
+        "startDateTime": "2020-08-25T00:00:00Z",\par
+        "endDateTime": "2021-03-25T00:00:00Z"\par
+      \},\par
+      "featureSpecRelationship": [],\par
+      "featureSpecCharacteristic": [],\par
+      "version": "1.0",\par
+      "@type": "FeatureSpecification",\par
+      "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Common/FeatureSpecification.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Common/FeatureSpecification.schema.json\ul0\cf0}}}}\f1\fs22 "\par
+    \}\par
+  ],\par
+  "@type": "ResourceFacingServiceSpecification",\par
+  "@schemaLocation": "{{\field{\*\fldinst{HYPERLINK https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json }}{\fldrslt{https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json\ul0\cf0}}}}\f1\fs22 ",\par
+  "@baseType": "ServiceSpecification"\par
+\}\par
+\par
+****For GET and DELETE operation we wont need any request body, only ID as a parameter will be required.****\par
+\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 GET Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to get all data : \par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to get an specific ID:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/:id , here "\b :id\b0 " \tab represents the ID which we need to retrieve.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 DELETE Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL to delete an id:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/:id , here "\b :id\b0 " \tab represents the ID which we need to delete.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl240\slmult1\tx540\b\fs24 PATCH Operation\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 URL for patch operation:\par
+
+\pard\sl240\slmult1\tx540\tab localhost:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/:id , here "\b :id\b0 " \tab represents the ID which we need to patch. We need to provide the ID so that we can \tab know which data point we need to patch.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx540 PATCH operation sample request body:\par
+
+\pard\sl240\slmult1\tx540\tab\{\par
+   "name":"Test1",\par
+   "description":"this is a test",\par
+   "version": "2.0"\par
+\}\par
+\par
+}
+ 
